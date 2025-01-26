@@ -1,0 +1,103 @@
+{
+    "shop" : {
+        "currency": "USD",
+        "language": "eng",
+        "weightUnit": "grm"
+    },
+    "catalog": {
+        "product": {
+            "image": {
+                "thumbnail": {
+                    "width": 100,
+                    "height": 100
+                },
+                "listing": {
+                    "width": 300,
+                    "height": 300
+                },
+                "single": {
+                    "width": 500,
+                    "height": 500
+                }
+            }
+        },
+        "showOutOfStockProduct": false
+    },
+    "system": {
+        "theme": "eve",
+        "extensions": [
+            {
+                "name": "google_login",
+                "resolve": "node_modules/@evershop/google_login",
+                "enabled": true,
+                "priority": 10
+            },
+            {
+                "name": "product_review",
+                "resolve": "node_modules/@evershop/product_review",
+                "enabled": true,
+                "priority": 20
+            },
+            {
+                "name": "resend",
+                "resolve": "node_modules/@evershop/resend",
+                "enabled": true,
+                "priority": 30
+            }
+        ]
+    },
+    "themeConfig": {
+        "logo": {
+            "alt": "Wolvex",
+            "src": "/adminLogo.png",
+            "width": 5,
+            "height": 5
+        },
+        "headTags": {
+            "links": [
+                {
+                    "rel": "icon",
+                    "href": "/favicon.ico"
+                },
+                {
+                    "rel": "stylesheed",
+                    "href": "custom.css"
+                }
+            ],
+            "scripts": [
+                {
+                    "src": "/custom.js"
+                },
+                {
+                    "src": "https://www.google.com/recaptcha/api.js"
+                }
+            ]
+        }
+    },
+    "google_login": {
+    "client_id": "",
+    "client_secret": "",
+    "success_redirect_url": "http://localhost:3000",
+    "failure_redirect_url": "http://localhost:3000/account/login"
+  },
+  "resend": {
+    "from": "admin@wolvex.co.uk",
+    "events": {
+      "order_placed": {
+        "subject": "Order Confirmation",
+        "enabled": true,
+        "templatePath": "config/emails/order_confirmation.html"
+      },
+      "reset_password": {
+        "subject": "Reset Password",
+        "enabled": true,
+        "templatePath": "config/emails/reset_password.html"
+      },
+      "customer_registered": {
+        "subject": "Welcome to EverShop",
+        "enabled": true,
+        "templatePath": "config/emails/welcome.html"
+      }
+    }
+  }
+}

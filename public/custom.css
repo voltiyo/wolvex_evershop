@@ -1,0 +1,10 @@
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    text-overflow: ellipsis;
+}
+.prose-base{
+    font-size: 1.5rem;
+}
