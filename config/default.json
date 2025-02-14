@@ -2,7 +2,8 @@
     "shop" : {
         "currency": "USD",
         "language": "eng",
-        "weightUnit": "grm"
+        "weightUnit": "grm",
+        "homeUrl" : "https://ebargains.uk"
     },
     "catalog": {
         "product": {
@@ -75,10 +76,10 @@
         }
     },
     "google_login": {
-    "client_id": "",
-    "client_secret": "",
-    "success_redirect_url": "http://localhost:3000",
-    "failure_redirect_url": "http://localhost:3000/account/login"
+    "client_id": "401677388420-c26d5nsvuvklksfl71qb97jndh05ddmi.apps.googleusercontent.com",
+    "client_secret": "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",
+    "success_redirect_url": "https://ebargains.uk",
+    "failure_redirect_url": "https://ebargains.uk/account/login"
   },
   "resend": {
     "from": "admin@wolvex.co.uk",
